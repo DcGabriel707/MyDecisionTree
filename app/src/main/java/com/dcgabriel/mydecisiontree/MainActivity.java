@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
 
         initializeQuestions();
         populateTextViews();
-        initializeTextToSpeech();
+
     }
 
     public void initializeQuestions() {
@@ -150,7 +150,7 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
-        speak();
+
     }
 
 
@@ -174,43 +174,4 @@ public class MainActivity extends AppCompatActivity {
         populateTextViews();
     }
 
-    public void initializeTextToSpeech() {
-        textToSpeech = new TextToSpeech(this, new TextToSpeech.OnInitListener() {
-            @Override
-            public void onInit(int status) {
-                if (status == TextToSpeech.SUCCESS) {
-                    int res = textToSpeech.setLanguage(Locale.ENGLISH);
-
-                    if (res == TextToSpeech.LANG_MISSING_DATA || res == TextToSpeech.LANG_NOT_SUPPORTED) {
-                        Toast.makeText(MainActivity.this, "Language not supported", Toast.LENGTH_SHORT).show();
-                    }
-
-                } else {
-                    Toast.makeText(MainActivity.this, "init unsucessful", Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
-    }
-
-    public void speak() {
-        String message = currentOutcome.getQuestionText();
-
-
-        if (message.isEmpty())
-            message = "This is a test. Message is empty";
-        else {
-
-            textToSpeech.speak(message, TextToSpeech.QUEUE_FLUSH, null, null);
-
-        }
-    }
-
-    @Override
-    protected void onDestroy() {
-        if (textToSpeech != null) {
-            textToSpeech.stop();
-            textToSpeech.shutdown();
-        }
-        super.onDestroy();
-    }
 }
