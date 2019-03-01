@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">MyDecisionTree</string>
-    <string name="q0">What kind of movie do I want to watch?</string>
+    <string name="q0">What kind of movie do you want to watch?</string>
     <string name="q1">What kind of fun do you enjoy?</string>
     <string name="q2">What type of emotional films do you prefer?</string>
     <string name="q3">What type of thought provoking films do you want?</string>
@@ -12,6 +12,21 @@
     <string name="q9">Choose a romance subgenre</string>
     <string name="q10">Choose a mystery subgenre</string>
     <string name="q11">Choose an educational subgenre</string>
+
+    //final outcomes
+    <string name="q12">You can watch Underdog. An aweful superhero beagle</string>
+    <string name="q33">You can watch The Room ...I mean it was a disaster</string>
+    <string name="q34">You can watch A Bugs Life. Watch as insects went into war with grasshoppers</string>
+    <string name="q13">You can watch Borat</string>
+    <string name="q14">You can watch The Room. A household classic</string>
+    <string name="q15">Batman and Robin seems to be a good fit</string>
+    <string name="q16">Deadpool 2 is the best for you</string>
+    <string name="q17">Deadpool 2 is the best for you</string>
+    <string name="q18">You can watch The Room as Tommy incorporate his life experiences into the heart of this film </string>
+    <string name="q19">You can watch The Room </string>
+    <string name="q20">You can watch The Room </string>
+    <string name="q21">You can watch The Room </string>
+    <string name="q23">The Room is the right choice</string>
 
     <string name="go_back">Go back</string>
     <string name="c1">I like something fun</string>
@@ -48,4 +63,5 @@
     <string name="c32">Propaganda</string>
     <string name="c33">Disaster</string>
     <string name="c34">War</string>
+
 </resources>

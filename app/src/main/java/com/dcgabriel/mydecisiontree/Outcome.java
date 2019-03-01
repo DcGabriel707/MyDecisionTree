@@ -1,5 +1,7 @@
 package com.dcgabriel.mydecisiontree;
 
+import android.text.Layout;
+
 public class Outcome {
 
     private String questionText;
@@ -7,9 +9,15 @@ public class Outcome {
     private Choice choice2;
     private Choice choice3;
     private Choice choice4;
+    private boolean isFinalOutcome;
 
     public Outcome(String questionText) {
         this.questionText = questionText;
+    }
+
+    public Outcome(String resultText, boolean isFinalOutcome, Choice choice4){
+        this.questionText = resultText;
+        this.isFinalOutcome = isFinalOutcome;
     }
 
     public Outcome(String questionText, Choice choice1, Choice choice2, Choice choice3, Choice choice4) {
@@ -18,6 +26,14 @@ public class Outcome {
         this.choice2 = choice2;
         this.choice3 = choice3;
         this.choice4 = choice4;
+    }
+
+    public boolean isFinalOutcome() {
+        return isFinalOutcome;
+    }
+
+    public void setFinalOutcome(boolean finalOutcome) {
+        isFinalOutcome = finalOutcome;
     }
 
     public void setAllChoices(Choice choice1, Choice choice2, Choice choice3, Choice choice4) {
